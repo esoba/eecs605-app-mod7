@@ -18,8 +18,8 @@ export default function AWSbutton() {
         console.log('making POST request...');
         fetch('https://ckb9kg7ckd.execute-api.us-east-1.amazonaws.com/prod/', {
             method: 'POST',
-            headers: { "Content-Type": "application/json", "Accept": "text/plain" },
-            body: JSON.stringify({ "matchup": inputFileData })
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify({ "matchup": "Kings vs. Bucks" })
         }).then(response => response.json())
         .then(data => {
             console.log('getting response...')
