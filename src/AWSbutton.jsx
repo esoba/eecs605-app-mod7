@@ -19,7 +19,7 @@ export default function AWSbutton() {
         fetch('https://ckb9kg7ckd.execute-api.us-east-1.amazonaws.com/prod', {
             method: 'POST',
             headers: { "Content-Type": "application/json", "Accept": "text/plain" },
-            body: JSON.stringify({ "matchup": inputFileData })
+            body: JSON.stringify({ "matchup": inputFileData }),
             event: JSON.stringify({ "matchup": inputFileData })
         }).then(response => response.json())
         .then(data => {
