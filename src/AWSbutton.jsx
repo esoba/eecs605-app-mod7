@@ -20,6 +20,7 @@ export default function AWSbutton() {
             method: 'POST',
             headers: { "Content-Type": "application/json", "Accept": "text/plain" },
             body: JSON.stringify({ "matchup": inputFileData })
+            event: JSON.stringify({ "matchup": inputFileData })
         }).then(response => response.json())
         .then(data => {
             console.log('getting response...')
