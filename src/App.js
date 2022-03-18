@@ -1,15 +1,19 @@
 import './App.css';
 import React from 'react';
-import AWSbutton from './AWSbutton';
-
+import AWSbutton from './components/AWSbutton';
+import TopBar from "./components/topbar/TopBar";
+import SideBar from "./components/sidebar/SideBar";
+import Home from "./pages/home/Home";
+import "./App.css";
+import React from "react";
 
 function App() {
-
   return (
     <div className="App">
-      <div className="Input">
-        <h1>Input</h1>
-        <AWSbutton input_data="Kings vs. Bucks"/>
+      <TopBar/>
+      <div className="container">
+        <SideBar/>
+        <Home/>
       </div>
     </div>
   );
