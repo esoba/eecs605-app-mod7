@@ -25,7 +25,6 @@ export default function featuredInfo() {
                 <AWSbutton input_name="Kings vs. Bucks"/>
             </div>
         </div>
-
     </div>
   )
 }
