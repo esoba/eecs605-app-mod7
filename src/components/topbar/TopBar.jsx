@@ -1,6 +1,5 @@
 import React from 'react'
 import './topbar.css'
-import {NotificationAddOutlined} from "@mui/icons-material" 
 
 export default function TopBar() {
   return (
