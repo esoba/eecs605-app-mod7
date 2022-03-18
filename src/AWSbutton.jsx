@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function AWSbutton() {
-    const [inputFileData, setInputFileData] = React.useState(''); // represented as bytes data (string)
+export default function AWSbutton(props) {
     const [outputFileData, setOutputFileData] = React.useState(''); // represented as readable data (text string)
     const [buttonDisable, setButtonDisable] = React.useState(false);
     const [buttonText, setButtonText] = React.useState('Predict winner');
@@ -12,14 +11,13 @@ export default function AWSbutton() {
         setButtonText('Loading Result');
 
         //Test with sample matchup
-        setInputFileData("Kings vs. Bucks")
 
         // make POST request
         console.log('making POST request...');
         fetch('https://ckb9kg7ckd.execute-api.us-east-1.amazonaws.com/prod/', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify({ "matchup": "Kings vs. Bucks" })
+            body: JSON.stringify({ "matchup": props.input_data })
         }).then(response => response.json())
         .then(data => {
             console.log('getting response...')

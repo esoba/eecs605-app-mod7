@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="Input">
         <h1>Input</h1>
-        <AWSbutton/>
+        <AWSbutton input_data="Kings vs. Bucks"/>
       </div>
     </div>
   );
