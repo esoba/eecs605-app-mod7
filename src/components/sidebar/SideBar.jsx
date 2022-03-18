@@ -1,6 +1,5 @@
 import React from 'react'
 import "./sidebar.css"
-import { LineStyle } from '@mui/icons-material'
 
 export default function SideBar() {
   return (
